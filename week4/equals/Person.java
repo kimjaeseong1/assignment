@@ -36,9 +36,9 @@ public class Person {
     }
 
     public static void main(String[] args) {
-        Person person1 = new Person("Alice", 30);
-        Person person2 = new Person("Bob", 25);
-        Person person3 = new Person("Alice", 30);
+        Person person1 = new Person("test", 30);
+        Person person2 = new Person("Equals", 25);
+        Person person3 = new Person("test", 30);
 
         // equals()를 사용하여 두 객체의 동등성 비교함
         System.out.println("person1.equals(person2): " + person1.equals(person2));

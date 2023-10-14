@@ -81,15 +81,18 @@ WHERE SAL >= 3000;
 
 -- 11. 사원번호가 7788 사원의 이름 및 부서번호를 출력
 
-SELECT EMPNO AS "사번", ENAME AS "이름", DEPTNO AS "부서번호"
+SELECT  ENAME AS "이름", DEPTNO AS "부서번호"
 FROM EMP
-WHERE DEPTNO = 10 AND SAL >= 3000;
+WHERE EMPNO = 7788;
 
 -- 12. 10번 부서원중에서 급여가 3000이상인 직원
 
-SELECT DEPTNO AS "부서번호", EMPNO AS "사번", ENAME AS "이름", JOB AS "직무"
-FROM EMP
-WHERE JOB = 'MANAGER';
+SELECT empno AS "사번",
+       ename AS "이름",
+       sal AS "급여"
+FROM emp
+WHERE deptno = 10
+AND sal >= 3000;
 
 
 -- 13. 출력정보 : 부서번호, 사번, 이름, 직무
@@ -272,6 +275,9 @@ FROM EMP;
 
 
 -- 31. 사번이 000인 직원의 이름은 000이다
+
+INSERT INTO emp (empno, ename)
+VALUES ('000', 'Kim jae seong');
 
 -- 32. 근무기간에 따른 사원들에 대한 교육을 진행하기로 하였다.
 -- 직원들의 사번, 이름, 입사일, 근무기간(년수, 년이하버림)의 정보를
